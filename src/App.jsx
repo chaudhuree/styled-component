@@ -1,30 +1,26 @@
-import styled, { ThemeProvider } from "styled-components"
-const cssvalue = {
-  BaseTheme: {
-    color: "#310a5f",
-    background: "salmon",
-  },
-  DarkTheme: {
-    color: "white",
-    background: "black",
-  },
-}
+import styled from "styled-components"
+import { GlobalStyle } from './styles/GlobalStyle'
+
 const Title = styled.h1`
 
-    background: ${({ theme }) => theme.BaseTheme.background};
-    color: ${({ theme }) => theme.BaseTheme.color};
-    width: 100%;
-    padding: 10px;
+    background: black;
+    color: white;
+    width: 100% !important;
+    padding: 10px !important;
+    &:hover{
+      box-shadow: 26px 34px 89px -8px rgba(207,70,209,0.64);
+-webkit-box-shadow: 26px 34px 89px -8px rgba(207,70,209,0.64);
+-moz-box-shadow: 26px 34px 89px -8px rgba(207,70,209,0.64);
+    }
 
 `
 function App() {
 
   return (
-    <ThemeProvider theme={cssvalue}>
-
-        <Title>Theming is here</Title>
-
-    </ThemeProvider>
+    <>
+      <GlobalStyle />
+      <Title>Theming is here</Title>
+    </>
   )
 }
 
