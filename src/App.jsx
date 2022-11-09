@@ -26,9 +26,17 @@ width: 200px;
 margin: 1rem auto;
 span{
   color:salmon;
+  &:after{
+    content:'❤';
+    color: #81f881;
+    margin-left: 10px;
+  }
 }
 &:hover{
   background-color:#433aee;
+}
+@media (max-width: 768px) {
+  border:4px solid palegreen;
 }
 `
 export default App
